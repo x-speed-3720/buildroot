@@ -1,0 +1,8 @@
+config BR2_PACKAGE_HDDTEMP
+	bool "hddtemp"
+	help
+	  hddtemp is a small utility that gives you the temperature of your
+	  hard drive by reading S.M.A.R.T. informations, for drives that
+	  support this feature. 
+
+	  http://www.guzu.net/linux/hddtemp.php

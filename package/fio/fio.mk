@@ -4,7 +4,8 @@
 #
 ################################################################################
 
-FIO_VERSION = 2.17
+FIO_VERSION = 3.10
+FIO_SOURCE = fio-$(FIO_VERSION).tar.bz2
 FIO_SITE = https://fossies.org/linux/misc
 FIO_LICENSE = GPLv2 + special obligations
 FIO_LICENSE_FILES = LICENSE
