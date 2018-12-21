@@ -1,0 +1,34 @@
+Index: memtester-4.3.0/tests.c
+===================================================================
+--- memtester-4.3.0.orig/tests.c
++++ memtester-4.3.0/tests.c
+@@ -40,12 +40,12 @@ int compare_regions(ulv *bufa, ulv *bufb
+         if (*p1 != *p2) {
+             if (use_phys) {
+                 physaddr = physaddrbase + (i * sizeof(ul));
+-                fprintf(stderr, 
++                fprintf(stdout, 
+                         "FAILURE: 0x%08lx != 0x%08lx at physical address "
+                         "0x%08lx.\n", 
+                         (ul) *p1, (ul) *p2, physaddr);
+             } else {
+-                fprintf(stderr, 
++                fprintf(stdout, 
+                         "FAILURE: 0x%08lx != 0x%08lx at offset 0x%08lx.\n", 
+                         (ul) *p1, (ul) *p2, (ul) (i * sizeof(ul)));
+             }
+@@ -81,12 +81,12 @@ int test_stuck_address(ulv *bufa, size_t
+             if (*p1 != (((j + i) % 2) == 0 ? (ul) p1 : ~((ul) p1))) {
+                 if (use_phys) {
+                     physaddr = physaddrbase + (i * sizeof(ul));
+-                    fprintf(stderr, 
++                    fprintf(stdout, 
+                             "FAILURE: possible bad address line at physical "
+                             "address 0x%08lx.\n", 
+                             physaddr);
+                 } else {
+-                    fprintf(stderr, 
++                    fprintf(stdout, 
+                             "FAILURE: possible bad address line at offset "
+                             "0x%08lx.\n", 
+                             (ul) (i * sizeof(ul)));
